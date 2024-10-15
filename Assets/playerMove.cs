@@ -21,7 +21,7 @@ public class playerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        myRB.AddForce(Direction(debugs) * speed);
+        myRB.AddForce(transform.TransformDirection(Direction(debugs)) * speed);
     }
 
     Vector3 Direction(bool debugs)
@@ -34,7 +34,9 @@ public class playerMove : MonoBehaviour
         {
             Debug.DrawRay(transform.position, myRB.velocity, Color.yellow);
             Debug.Log("vector: " + dir);
-            Debug.DrawRay(transform.position, dir * 2f, Color.white);
+            Debug.DrawRay(transform.position, transform.TransformDirection(dir * 2f), Color.white);
+            Debug.DrawRay(transform.position + Vector3.up, transform.forward, Color.green);
+            Debug.DrawRay(transform.position + Vector3.up, transform.right, Color.green);
         }
         return dir;
     }
