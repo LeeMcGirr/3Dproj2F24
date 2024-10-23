@@ -36,7 +36,7 @@ public class camController : MonoBehaviour
         //clamp the magnitude to keep the player from looking fully upside down
         myLook.y = Mathf.Clamp(myLook.y, -camLock, camLock);
 
-        Debug.Log("myLook: " + myLook);
+        //Debug.Log("myLook: " + myLook);
         transform.rotation = Quaternion.Euler(0f, myLook.x, 0f);
         myCam.transform.rotation = Quaternion.Euler(-myLook.y, myLook.x, 0f);
 

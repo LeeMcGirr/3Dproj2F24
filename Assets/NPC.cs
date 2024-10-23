@@ -11,7 +11,7 @@ public class NPC : MonoBehaviour
     public NPC myScript;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         myRB = GetComponent<Rigidbody>();
         targetPlayer = GameObject.FindWithTag("Player");
@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("update not defined yet");
+        //Debug.Log("update not defined yet");
     }
 
     protected virtual void Move()

@@ -33,7 +33,7 @@ public class playerMove : MonoBehaviour
         if (debugs)
         {
             Debug.DrawRay(transform.position, myRB.velocity, Color.yellow);
-            Debug.Log("vector: " + dir);
+            //Debug.Log("vector: " + dir);
             Debug.DrawRay(transform.position, transform.TransformDirection(dir * 2f), Color.white);
             Debug.DrawRay(transform.position + Vector3.up, transform.forward, Color.green);
             Debug.DrawRay(transform.position + Vector3.up, transform.right, Color.green);
